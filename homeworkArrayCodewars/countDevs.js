@@ -30,3 +30,7 @@ function countDevelopers(list) {
   }
   return counter;
 }
+
+// This also works:
+
+return list.filter((c) => c.continent == "Europe" && c.language == "JavaScript").length;
