@@ -1,0 +1,54 @@
+
+** map ** - 
+descripton: map is used when you want to get a new array and calling a function once for each of the elements in the current array, in order.
+
+examples: 
+1) let nums = [1, 4, 9]
+   let roots = nums.map(function(num) {
+       return Math.sqrt(num)
+   })
+        This returns [1, 2, 3]
+
+2) let numbers = [65, 44, 12, 4];
+   let newArray = numbers.map(function(num) {
+        return num * 10;
+    })
+        This returns [650, 440, 120, 40]
+
+3) let oatMilkPrice = [1.50, 1.75, 1.60, 2.00, 2.05, 1.45];
+   let inflationIsAKiller = cookiePrices.map(cookie => {
+	    let price = cookie * 1.05;
+	    return price.toFixed(2);
+    });
+        This returns ["1.58", "1.84", "1.68", "2.10", "2.15", "1.52"]
+
+console.log(newCookiePrices);
+reduce
+filter
+forEach
+sort
+slice
+pop
+shift
+push
+unshift
+includes
+indexOf
+every
+
+Give a short description of what the method does, how it works, it's time complexity (if appropriate), and give three examples of it in action!
+
+Questions to practice:
+
+One:
+Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+Two:
+You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed 'age' of 0. Return a new array with [youngest age, oldest age, difference between the youngest and oldest age].
+
+Three:
+Sum all the numbers of the array except the highest and the lowest element (the value, not the index!).
+Example:
+[ 6, 2, 1, 8, 10 ] => 16
+[ 1, 1, 11, 2, 3 ] => 6
