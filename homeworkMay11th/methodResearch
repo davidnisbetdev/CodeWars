@@ -23,10 +23,90 @@ examples:
         This returns ["1.58", "1.84", "1.68", "2.10", "2.15", "1.52"]
 
 console.log(newCookiePrices);
-reduce
-filter
-forEach
-sort
+
+** reduce ** -
+description: reduce takes and array and returns one value.
+
+examples:
+ 1) var total = 0;
+    1, 2, 3].forEach(function (num) {
+            total += num;
+    });
+
+2) let net=[3]; //Array with one element.  
+    let calc=net.reduce((accumulator,currentValue)=>accumulator+currentValue);  
+    document.write("The total of the array element comes out to be: "+calc);  
+
+3) const maxDate = dates.reduce((max, d) => d > max ? d : max, dates[0]); 
+
+** filter ** - 
+
+description: Creates a new array with all the elements that pass the test implemented in the function
+
+examples:
+  1) const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+     const result = words.filter(word => word.length > 6);
+     console.log(result);
+     //output: Array ["exuberant", "destruction", "present"]
+
+   2) const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      nums.filter(function isEven(num) {
+      return num % 2 === 0;
+    }); // returns [2, 4, 6, 8, 10]
+
+    3) const characters = [
+        { name: 'Batman', team: 'Justice League' },
+        { name: 'Hulk', team: 'Avengers' },
+        { name: 'Flash', team: 'Justice League' },
+        { name: 'Iron Man', team: 'Avengers' },
+        { name: 'Deadpool', team: 'X-Force' }
+    ];
+        const avengers = characters.filter(character => character.team === 'Avengers');
+
+** forEach ** - 
+
+description: Loops through an array once for each element in the array.
+
+examples:
+  1) // Prints "a", "b", "c"
+     ['a', 'b', 'c'].forEach(v => {
+     console.log(v);
+   });
+
+  2) const arr = ['a', 'b', 'c'];
+     arr.forEach((v, i) => {
+     arr[i] = v.toUpperCase();
+   });
+     arr; // ['A', 'B', 'C']
+
+  3) const obj = {
+  a: 1,
+  b: 2,
+  c: 3
+};
+   // Prints "a", "b", "c"
+    Object.keys(obj).forEach(key => console.log(key));
+
+** sort ** -
+
+description: sorts items in an array either numerically or alphabetic, ascending or descending
+
+examples:
+  
+  1) let fruits = ["Banana", "Orange", "Apple", "Mango"];
+     fruits.sort(); // ["Apple", "Banana", "Mango", "Orange"]
+
+  2) const array1 = [1, 30, 4, 21, 100000];
+      array1.sort();
+      console.log(array1);
+      // expected output: Array [1, 100000, 21, 30, 4]
+
+  3) const months = ['March', 'Jan', 'Feb', 'Dec'];
+     months.sort();
+     console.log(months);
+     // expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+
 slice
 pop
 shift
@@ -36,7 +116,6 @@ includes
 indexOf
 every
 
-Give a short description of what the method does, how it works, it's time complexity (if appropriate), and give three examples of it in action!
 
 Questions to practice:
 
