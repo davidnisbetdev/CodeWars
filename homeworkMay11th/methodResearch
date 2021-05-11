@@ -259,7 +259,10 @@ You will be given an array of all the family members' ages, in any order.
 The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed 'age' of 0. 
 Return a new array with [youngest age, oldest age, difference between the youngest and oldest age].
 
+let Arr = [3, 4, 6, 7]
+let finalArr = []
 
+finalArr.push(arr.sort([0]))
 
 Three:
 Sum all the numbers of the array except the highest and the lowest element (the value, not the index!).
