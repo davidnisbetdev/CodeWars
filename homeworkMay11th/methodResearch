@@ -106,15 +106,142 @@ examples:
      console.log(months);
      // expected output: Array ["Dec", "Feb", "Jan", "March"]
 
+** slice ** -
 
-slice
-pop
-shift
-push
-unshift
-includes
-indexOf
-every
+description: The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+
+examples:
+
+  1) const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+     console.log(animals.slice(2));
+     // expected output: Array ["camel", "duck", "elephant"]
+
+  2) console.log(animals.slice(2, 4));
+     // expected output: Array ["camel", "duck"]
+
+  3) console.log(animals.slice(1, 5));
+     // expected output: Array ["bison", "camel", "duck", "elephant"]
+
+** pop **
+
+description: Removes the last element from an array
+
+examples: 
+
+  1) const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+     console.log(plants.pop());
+     // expected output: "tomato"
+
+  2) console.log(plants);
+     // expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+  3) plants.pop();
+     console.log(plants);
+     // expected output: Array ["broccoli", "cauliflower", "cabbage"]
+
+
+** shift ** -
+
+description: removes the first element from an array
+
+examples: 
+
+  1) const array1 = [1, 2, 3];
+     const firstElement = array1.shift();
+
+  2) console.log(array1);
+     // expected output: Array [2, 3]
+
+  3) console.log(firstElement);
+     // expected output: 1
+
+** push ** -
+
+description: adds an element to the end of an array
+
+examples: 
+
+  1) const animals = ['pigs', 'goats', 'sheep'];
+     const count = animals.push('cows');
+     console.log(count);
+     // expected output: 4
+
+  2) console.log(animals);
+     // expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+  3) animals.push('chickens', 'cats', 'dogs');
+     console.log(animals);
+     // expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+
+** unshift ** -
+
+description: Adds an element to the start of an array.
+
+examples: 
+
+  1) const array1 = [1, 2, 3];
+     console.log(array1.unshift(4, 5));
+     // expected output: 5
+
+  2) console.log(array1);
+     // expected output: Array [4, 5, 1, 2, 3]
+
+  3) let fruits = ["Banana", "Orange", "Apple", "Mango"];
+     fruits.unshift("Lemon","Pineapple");
+
+** includes **
+
+description: The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+
+examples:
+
+  1) const array1 = [1, 2, 3];
+     console.log(array1.includes(2));
+     // expected output: true
+
+  2) const pets = ['cat', 'dog', 'bat'];
+     console.log(pets.includes('cat'));
+     // expected output: true
+
+  3) console.log(pets.includes('at'));
+     // expected output: false
+
+** indexOf **
+
+description: The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+
+examples:
+
+  1) const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+     console.log(beasts.indexOf('bison'));
+     // expected output: 1
+
+  2) // start from index 2
+     console.log(beasts.indexOf('bison', 2));
+     // expected output: 4
+
+  3) console.log(beasts.indexOf('giraffe'));
+     // expected output: -1
+
+** every **
+
+description: The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+
+examples:
+
+  1) const isBelowThreshold = (currentValue) => currentValue < 40;
+     const array1 = [1, 30, 39, 29, 10, 13];
+     console.log(array1.every(isBelowThreshold));
+     // expected output: true
+
+  2) function isBigEnough(element, index, array) {
+  return element >= 10;
+}
+[12, 5, 8, 130, 44].every(isBigEnough);   // false
+[12, 54, 18, 130, 44].every(isBigEnough); // true
+
+  3) [12, 5, 8, 130, 44].every(x => x >= 10);   // false
+     [12, 54, 18, 130, 44].every(x => x >= 10); // true
 
 
 Questions to practice:
