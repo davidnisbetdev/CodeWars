@@ -29,9 +29,7 @@ description: reduce takes and array and returns one value.
 
 examples:
  1) var total = 0;
-    1, 2, 3].forEach(function (num) {
-            total += num;
-    });
+    1, 2, 3].reduce((acc, c) => acc + c, 0);
 
 2) let net=[3]; //Array with one element.  
     let calc=net.reduce((accumulator,currentValue)=>accumulator+currentValue);  
@@ -253,12 +251,10 @@ Given a non-empty array of integers, return the result of multiplying the values
 **Answer**
 
 function multiplyAll(nums){
-   alert(arr.reduce((acc, c) => c * c, 0)) //returns 24
+   alert(nums.reduce((a, b) => a * b, 1)) //returns 24
 }
 
 multiplyAll([1, 2, 3, 4])
-
-
 
 Two:
 You will be given an array of all the family members' ages, in any order. 
